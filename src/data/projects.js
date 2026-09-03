@@ -194,7 +194,7 @@ export const projects = [
   {
     id: 'portfolio',
     title: 'Mi Portafolio',
-    badge: 'Autorreferencial',
+    badge: 'Co-creado con Muse',
     accent: 'deepseek',
     liveUrl: 'https://mi-portafolio-ashy-mu.vercel.app/',
     thumb: '/thumbs/portfolio.jpg',
