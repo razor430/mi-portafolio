@@ -191,4 +191,52 @@ export const projects = [
     howToUse:
       'Filtrá por categoría, buscá un ticker o una acción que tengas, compará expense ratio y retornos, y entrá a Analizar para ver la composición antes de decidir.',
   },
+  {
+    id: 'portfolio',
+    title: 'Mi Portafolio',
+    badge: 'Autorreferencial',
+    accent: 'deepseek',
+    liveUrl: 'https://mi-portafolio-ashy-mu.vercel.app/',
+    thumb: '/thumbs/portfolio.jpg',
+    description:
+      'Este mismo sitio: portfolio cyberpunk en modo oscuro con rutas detalle por proyecto, miniaturas locales, formulario de contacto y menú móvil animado.',
+    longDescription:
+      'Meta-proyecto: el portfolio que estás viendo, construido como SPA escalable a multipágina con React Router, Tailwind y Framer Motion.',
+    overview: [
+      'Este portfolio es a la vez contenedor y contenido: la home presenta hero, grid de proyectos, skills y contacto, y cada proyecto tiene su ruta /proyectos/:id con descripción elaborada, miniatura, features, stack y enlace al sitio en vivo.',
+      'La estética es cyberpunk minimalista en modo oscuro estricto (#070A13, tarjetas #111625, bordes #1F293D) con dos acentos neón: verde esmeralda y azul eléctrico. Todas las secciones animan con Framer Motion al hacer scroll y las tarjetas tienen hover premium con escala y glow sincronizado a su color.',
+      'Las miniaturas viven en public/thumbs para no depender de servicios externos, el formulario de contacto arma un mailto con asunto y cuerpo, y el header lleva menú hamburguesa animado en mobile. Deployado en Vercel con build de Vite.',
+    ],
+    sections: [
+      {
+        title: 'Home SPA',
+        text: 'Hero, grid de proyectos, skills y contacto en una sola página con navegación por anclas.',
+      },
+      {
+        title: 'Rutas detalle',
+        text: 'Ruta /proyectos/:id genérica con overview, recorrido por el sitio, fuentes y cómo usarlo.',
+      },
+      {
+        title: 'Hover premium',
+        text: 'Escala 1.02 + box-shadow neón sincronizado al acento en cada tarjeta de proyecto.',
+      },
+      {
+        title: 'Miniaturas locales',
+        text: 'Capturas reales en public/thumbs, sin depender de servicios externos pagos.',
+      },
+      {
+        title: 'Contacto real',
+        text: 'Formulario que compone un mailto + botón con gradiente esmeralda→azul y glow.',
+      },
+      {
+        title: 'Header mobile',
+        text: 'Hamburguesa que muta a X con panel desplegable animado y cierre automático.',
+      },
+    ],
+    features: ['SPA escalable a multipágina con Router', 'Rutas detalle con contenido elaborado', 'Thumbs locales + form + menú animado'],
+    stack: ['React + Vite + Tailwind v3', 'Framer Motion + React Router', 'Vercel'],
+    dataSources: ['Contenido propio', 'Capturas locales'],
+    howToUse:
+      'Estás dentro: navegá a cada ruta detalle desde las cards, probá el menú móvil achicando la ventana y usá el formulario para escribirme.',
+  },
 ]
