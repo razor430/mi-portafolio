@@ -3,6 +3,7 @@ import Hero from '../components/Hero.jsx'
 import ProjectGrid from '../components/ProjectGrid.jsx'
 import Skills from '../components/Skills.jsx'
 import Contact from '../components/Contact.jsx'
+import Footer from '../components/Footer.jsx'
 
 export default function Home() {
   return (
@@ -14,9 +15,7 @@ export default function Home() {
         <Skills />
         <Contact />
       </main>
-      <footer className="border-t border-edge py-6 text-center text-sm text-gray-500">
-        AI-Driven Development — DeepSeek x Codex x Muse
-      </footer>
+      <Footer />
     </>
   )
 }

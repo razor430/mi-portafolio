@@ -1,6 +1,7 @@
 import { Link, useParams } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import Navbar from '../components/Navbar.jsx'
+import Footer from '../components/Footer.jsx'
 import { projects } from '../data/projects.js'
 
 const fade = {
@@ -126,6 +127,7 @@ export default function ProjectDetail() {
           </motion.div>
         </div>
       </main>
+      <Footer />
     </>
   )
 }
