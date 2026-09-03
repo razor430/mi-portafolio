@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
+import Logo3D from './Logo3D.jsx'
 
 const links = [
   { href: '#proyectos', label: 'Proyectos' },
@@ -14,9 +15,12 @@ export default function Navbar() {
   return (
     <nav className="fixed top-0 w-full z-50 border-b border-edge bg-void/80 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <Link to="/" className="font-bold tracking-widest" onClick={() => setOpen(false)}>
-          <span className="text-deepseek">&lt;</span>AI.DEV
-          <span className="text-codex">/&gt;</span>
+        <Link to="/" className="flex items-center gap-2.5 font-bold tracking-widest" onClick={() => setOpen(false)}>
+          <Logo3D />
+          <span>
+            <span className="text-deepseek">&lt;</span>AI.DEV
+            <span className="text-codex">/&gt;</span>
+          </span>
         </Link>
 
         <div className="hidden gap-6 text-sm text-gray-300 md:flex">

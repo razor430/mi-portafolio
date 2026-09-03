@@ -11,3 +11,48 @@ body {
   background: #10B981;
   color: #070A13;
 }
+
+/* Logo 3D: cubo neón rotando */
+.logo-scene {
+  width: 28px;
+  height: 28px;
+  perspective: 200px;
+  filter: drop-shadow(0 0 6px rgba(16, 185, 129, 0.55)) drop-shadow(0 0 12px rgba(59, 130, 246, 0.35));
+}
+
+.logo-cube {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: logo-spin 6s linear infinite;
+}
+
+.logo-face {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(16, 185, 129, 0.7);
+  font-size: 10px;
+  font-weight: 800;
+  color: #fff;
+}
+
+.logo-face.front { transform: rotateY(0deg) translateZ(14px); background: rgba(16, 185, 129, 0.25); }
+.logo-face.back { transform: rotateY(180deg) translateZ(14px); background: rgba(59, 130, 246, 0.25); }
+.logo-face.right { transform: rotateY(90deg) translateZ(14px); background: rgba(59, 130, 246, 0.35); }
+.logo-face.left { transform: rotateY(-90deg) translateZ(14px); background: rgba(16, 185, 129, 0.35); }
+.logo-face.top { transform: rotateX(90deg) translateZ(14px); background: rgba(16, 185, 129, 0.15); }
+.logo-face.bottom { transform: rotateX(-90deg) translateZ(14px); background: rgba(59, 130, 246, 0.15); }
+
+@keyframes logo-spin {
+  from { transform: rotateX(-20deg) rotateY(0deg); }
+  to { transform: rotateX(-20deg) rotateY(360deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .logo-cube { animation: none; }
+}
