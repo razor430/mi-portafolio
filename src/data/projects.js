@@ -239,4 +239,52 @@ export const projects = [
     howToUse:
       'Estás dentro: navegá a cada ruta detalle desde las cards, probá el menú móvil achicando la ventana y usá el formulario para escribirme.',
   },
+  {
+    id: 'ofertas-ar',
+    title: 'OfertasAR',
+    badge: 'Co-creado con DeepSeek',
+    accent: 'deepseek',
+    liveUrl: 'https://superofertas-three.vercel.app/',
+    thumb: '/thumbs/superofertas.jpg',
+    description:
+      'Comparador de supermercados argentinos: buscá productos, marcas o categorías y encontrá el mejor precio de la semana en 8 cadenas.',
+    longDescription:
+      'Ahorro semanal en un solo lugar: precios reales en tiempo real de Jumbo, Coto, Disco, Vea, Carrefour, Día, ChangoMás y Vital.',
+    overview: [
+      'OfertasAR responde “¿dónde conviene comprar esta semana?”: centraliza precios reales relevados en tiempo real de ocho supermercados argentinos y muestra el mejor precio por producto, marca o categoría en una sola búsqueda.',
+      'El flujo es simple: escribís leche, aceite o fideos (o presionás Enter), filtrás por cadena, activás Solo ofertas, ordenás por relevancia y ponés un precio máximo para acotar. Todo actualizado hoy, con el aviso de que los datos pueden variar según disponibilidad de cada cadena.',
+      'Aplica al changuito semanal la misma filosofía de los dashboards financieros: densidad útil, filtros potentes y cero fricción para decidir rápido dónde comprar.',
+    ],
+    sections: [
+      {
+        title: 'Buscador',
+        text: 'Productos, marcas o categorías con ejemplos (leche, aceite, fideos) y búsqueda con botón o Enter.',
+      },
+      {
+        title: '8 cadenas',
+        text: 'Jumbo, Coto, Disco, Vea, Carrefour, Día, ChangoMás y Vital como filtros por supermercado.',
+      },
+      {
+        title: 'Solo ofertas',
+        text: 'Toggle para ver únicamente los precios en oferta de la semana.',
+      },
+      {
+        title: 'Precio máximo',
+        text: 'Tope en pesos para filtrar resultados según tu presupuesto.',
+      },
+      {
+        title: 'Mejor precio semanal',
+        text: 'Comparativa del mejor precio de la semana por producto en un solo lugar.',
+      },
+      {
+        title: 'Datos en vivo',
+        text: 'Actualizado hoy, precios reales en ARS con disclaimer de disponibilidad por cadena.',
+      },
+    ],
+    features: ['8 supermercados con precios en tiempo real', 'Filtros por cadena, ofertas y precio máximo', 'Mejor precio de la semana por producto'],
+    stack: ['React + Vite', 'Precios reales en tiempo real', 'Vercel'],
+    dataSources: ['Relevamiento en tiempo real', '8 cadenas argentinas'],
+    howToUse:
+      'Escribí un producto y presioná Buscar, filtrá por tus cadenas habituales, activá Solo ofertas y fijá un precio máximo para cazar el mejor precio.',
+  },
 ]
