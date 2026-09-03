@@ -14,10 +14,16 @@ body {
 
 /* Logo 3D: cubo neón rotando */
 .logo-scene {
-  width: 28px;
-  height: 28px;
-  perspective: 200px;
-  filter: drop-shadow(0 0 6px rgba(16, 185, 129, 0.55)) drop-shadow(0 0 12px rgba(59, 130, 246, 0.35));
+  width: 30px;
+  height: 30px;
+  perspective: 110px;
+  filter: drop-shadow(0 0 5px rgba(16, 185, 129, 0.6)) drop-shadow(0 0 10px rgba(59, 130, 246, 0.35));
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.logo-link:hover .logo-scene {
+  transform: scale(1.18);
+  filter: drop-shadow(0 0 8px rgba(16, 185, 129, 0.95)) drop-shadow(0 0 20px rgba(59, 130, 246, 0.75)) drop-shadow(0 0 34px rgba(59, 130, 246, 0.45));
 }
 
 .logo-cube {
@@ -28,29 +34,58 @@ body {
   animation: logo-spin 6s linear infinite;
 }
 
+.logo-link:hover .logo-cube {
+  animation-duration: 1.6s;
+}
+
 .logo-face {
   position: absolute;
-  width: 28px;
-  height: 28px;
+  width: 30px;
+  height: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid rgba(16, 185, 129, 0.7);
-  font-size: 10px;
+  font-size: 9px;
   font-weight: 800;
   color: #fff;
+  text-shadow: 0 0 6px rgba(255, 255, 255, 0.8);
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.55);
 }
 
-.logo-face.front { transform: rotateY(0deg) translateZ(14px); background: rgba(16, 185, 129, 0.25); }
-.logo-face.back { transform: rotateY(180deg) translateZ(14px); background: rgba(59, 130, 246, 0.25); }
-.logo-face.right { transform: rotateY(90deg) translateZ(14px); background: rgba(59, 130, 246, 0.35); }
-.logo-face.left { transform: rotateY(-90deg) translateZ(14px); background: rgba(16, 185, 129, 0.35); }
-.logo-face.top { transform: rotateX(90deg) translateZ(14px); background: rgba(16, 185, 129, 0.15); }
-.logo-face.bottom { transform: rotateX(-90deg) translateZ(14px); background: rgba(59, 130, 246, 0.15); }
+.logo-face.front {
+  transform: rotateY(0deg) translateZ(15px);
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.9), rgba(16, 185, 129, 0.35));
+  border: 1px solid rgba(110, 255, 200, 0.9);
+}
+.logo-face.back {
+  transform: rotateY(180deg) translateZ(15px);
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.5), rgba(59, 130, 246, 0.15));
+  border: 1px solid rgba(147, 197, 253, 0.7);
+}
+.logo-face.right {
+  transform: rotateY(90deg) translateZ(15px);
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.85), rgba(59, 130, 246, 0.3));
+  border: 1px solid rgba(147, 197, 253, 0.9);
+}
+.logo-face.left {
+  transform: rotateY(-90deg) translateZ(15px);
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.55), rgba(16, 185, 129, 0.2));
+  border: 1px solid rgba(110, 255, 200, 0.7);
+}
+.logo-face.top {
+  transform: rotateX(90deg) translateZ(15px);
+  background: linear-gradient(135deg, rgba(167, 243, 208, 0.7), rgba(16, 185, 129, 0.3));
+  border: 1px solid rgba(209, 250, 229, 0.9);
+}
+.logo-face.bottom {
+  transform: rotateX(-90deg) translateZ(15px);
+  background: linear-gradient(135deg, rgba(30, 58, 138, 0.8), rgba(59, 130, 246, 0.25));
+  border: 1px solid rgba(147, 197, 253, 0.6);
+}
 
 @keyframes logo-spin {
-  from { transform: rotateX(-20deg) rotateY(0deg); }
-  to { transform: rotateX(-20deg) rotateY(360deg); }
+  from { transform: rotateX(-24deg) rotateY(0deg); }
+  to { transform: rotateX(-24deg) rotateY(360deg); }
 }
 
 @media (prefers-reduced-motion: reduce) {

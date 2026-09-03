@@ -15,7 +15,7 @@ export default function Navbar() {
   return (
     <nav className="fixed top-0 w-full z-50 border-b border-edge bg-void/80 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <Link to="/" className="flex items-center gap-2.5 font-bold tracking-widest" onClick={() => setOpen(false)}>
+        <Link to="/" className="logo-link flex items-center gap-2.5 font-bold tracking-widest" onClick={() => setOpen(false)}>
           <Logo3D />
           <span>
             <span className="text-deepseek">&lt;</span>AI.DEV
