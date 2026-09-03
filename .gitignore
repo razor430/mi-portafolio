@@ -21,4 +21,7 @@ Thumbs.db
 # vercel
 .vercel/
 
+# prompt original (local solamente)
+prompt.txt
+
 .vercel
